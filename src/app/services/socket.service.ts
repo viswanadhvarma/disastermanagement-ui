@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { io, Socket } from 'socket.io-client';
 import { Observable } from 'rxjs';
+import { APP_URL } from '../configService';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class SocketService {
   private socket: Socket;
 
   constructor() {
-    this.socket = io('http://localhost:5000'); // Replace with your backend URL
+    this.socket = io(`${APP_URL}`); // Replace with your backend URL
   }
 
   listen(eventName: string): Observable<any> {

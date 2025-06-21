@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Disaster } from '../models/disaster.model';
+import { APP_URL } from '../configService';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DisasterService {
-  private apiUrl = 'http://localhost:5000/disasters';
+  private apiUrl = `${APP_URL}/disasters`;
 
   constructor(private http: HttpClient) {}
 

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { APP_URL } from './configService';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:5000/disasters').subscribe(data => {
+    this.http.get<any[]>(`${APP_URL}/disasters`).subscribe(data => {
       if (data && data.length > 0) {
         // Adjust center to first resource
         this.center = {
