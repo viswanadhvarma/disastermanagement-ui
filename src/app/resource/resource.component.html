@@ -1,0 +1,17 @@
+<div class="resources-container">
+  <h2>Disaster Resources</h2>
+
+  <div *ngFor="let res of resources" class="resource-card">
+    <h3>{{ res.name }} <small>({{ res.type }})</small></h3>
+
+    <p><strong>Disaster ID:</strong> {{ res.disaster_id }}</p>
+
+    <p *ngIf="res.location_name">
+      <strong>Location:</strong> {{ res.location_name }}
+    </p>
+
+    <p><strong>Geo Data:</strong> {{ res.location }}</p>
+
+    <small class="timestamp">Created: {{ res.created_at | date: 'medium' }}</small>
+  </div>
+</div>

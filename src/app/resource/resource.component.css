@@ -1,0 +1,35 @@
+.resources-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.resources-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1d3557;
+}
+
+.resource-card {
+  background: white;
+  border-left: 6px solid #2a9d8f;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h3 {
+  margin: 0;
+  color: #264653;
+}
+
+.resource-card p {
+  margin: 0.4rem 0;
+}
+
+.timestamp {
+  display: block;
+  color: gray;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}

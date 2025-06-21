@@ -1,0 +1,33 @@
+.homepage-container {
+  padding: 30px;
+  text-align: center;
+  background: #f7f9fc;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.section-intro h2 {
+  margin-top: 40px;
+  color: #34495e;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 300px;
+}

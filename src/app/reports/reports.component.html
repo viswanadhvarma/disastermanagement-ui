@@ -1,0 +1,21 @@
+<div class="report-container">
+  <h2>Disaster Reports</h2>
+
+  <div *ngFor="let report of reports" class="report-card">
+    <div class="report-header">
+      <span><strong>User:</strong> {{ report.user_id }}</span>
+      <span class="status" [class.pending]="report.verification_status === 'pending'">
+        Status: {{ report.verification_status }}
+      </span>
+    </div>
+
+    <p class="content">{{ report.content }}</p>
+
+    <img *ngIf="report.image_url" [src]="report.image_url" alt="Report Image" />
+
+    <div class="report-footer">
+      <span><strong>Disaster ID:</strong> {{ report.disaster_id }}</span>
+      <span class="timestamp">{{ report.created_at | date: 'medium' }}</span>
+    </div>
+  </div>
+</div>

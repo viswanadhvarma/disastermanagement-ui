@@ -1,0 +1,19 @@
+<div class="post-form">
+  <input [(ngModel)]="newPost.user" placeholder="Your name" />
+  <input [(ngModel)]="newPost.disaster_id" placeholder="Disaster ID" />
+  <textarea [(ngModel)]="newPost.content" placeholder="What's happening?"></textarea>
+  <button (click)="submitPost()">Post</button>
+</div>
+
+<div class="feed">
+  <div *ngFor="let post of posts" class="post-card">
+    <strong>{{ post.user }}</strong>  
+    <span style="color: grey;">[{{ post.timestamp | date:'short' }}]</span> <br />
+    <em>Disaster ID:</em> {{ post.disaster_id }} <br />
+    <em>Status:</em> <span [ngStyle]="{ color: post.status === 'verified' ? 'green' : 'red' }">
+      {{ post.status }}
+    </span> <br />
+    <p>{{ post.content }}</p>
+    <hr />
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.disaster-container {
+  padding: 1rem;
+}
+
+.disaster-card {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #2196f3;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+button {
+  margin-right: 0.5rem;
+}
+

@@ -1,0 +1,25 @@
+<div class="disaster-container">
+  <h2>Disaster Records</h2>
+
+  <!-- Create or Edit Form -->
+  <form (ngSubmit)="isEditing ? updateDisaster() : createDisaster()" #disasterForm="ngForm">
+    <input type="text" name="title" [(ngModel)]="formDisaster.title" placeholder="Disaster Title" required />
+    <input type="text" name="location_name" [(ngModel)]="formDisaster.location_name" placeholder="Location" required />
+    <textarea name="description" [(ngModel)]="formDisaster.description" placeholder="Description" required></textarea>
+    <button type="submit" [disabled]="!disasterForm.valid">{{ isEditing ? 'Update' : 'Add' }}</button>
+    <button type="button" (click)="cancelEdit()" *ngIf="isEditing">Cancel</button>
+  </form>
+
+  <hr />
+
+  <!-- Disaster List -->
+  <div *ngFor="let disaster of disasters" class="disaster-card">
+    <h3>{{ disaster.title }}</h3>
+    <p><strong>Location:</strong> {{ disaster.location_name }}</p>
+    <p>{{ disaster.description }}</p>
+    <p class="timestamp">{{ disaster.created_at | date: 'medium' }}</p>
+
+    <button (click)="editDisaster(disaster)">Edit</button>
+    <button (click)="deleteDisaster(disaster.id)">Delete</button>
+  </div>
+</div>

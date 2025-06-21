@@ -1,0 +1,21 @@
+<div class="official-update-container">
+  <h2>Search Official Updates</h2>
+
+  <div class="search-box">
+    <input type="text" [(ngModel)]="disasterId" placeholder="Enter Disaster ID" />
+    <button (click)="fetchUpdates()">Search</button>
+  </div>
+
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  <p *ngIf="loading">Loading updates...</p>
+
+  <div *ngIf="updates.length > 0" class="update-list">
+    <div *ngFor="let update of updates" class="update-card">
+      <p class="message">📝 {{ update.message }}</p>
+      <p><strong>Disaster ID:</strong> {{ update.disaster_id }}</p>
+      <p class="timestamp">🕒 {{ update.timestamp | date: 'medium' }}</p>
+    </div>
+  </div>
+
+  <p *ngIf="!loading && updates.length === 0 && !errorMessage">No updates found.</p>
+</div>
