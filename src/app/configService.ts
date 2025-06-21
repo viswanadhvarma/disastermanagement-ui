@@ -1,1 +1,1 @@
-export const APP_URL = 'https://disastermanagement-service.onrender.com/'
+export const APP_URL = 'https://disastermanagement-service.onrender.com'
