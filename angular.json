@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.css"
@@ -89,7 +90,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["https://maps.googleapis.com/maps/api/js?key=AIzaSyBtCZorTc6ONhhol62W-C_k2FhrUhVCyI0"]
+            "scripts": [
+              "https://maps.googleapis.com/maps/api/js?key=AIzaSyBtCZorTc6ONhhol62W-C_k2FhrUhVCyI0"
+            ]
           }
         }
       }
